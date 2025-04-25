@@ -1,5 +1,20 @@
+import { access, cp } from "fs";
+
+const folderName = "./src/fs/files";
+const copyFolderName = "./src/fs/files_copy";
+
 const copy = async () => {
-    // Write your code here 
+  access(copyFolderName, (notExist) => {
+    if (notExist) {
+      cp(folderName, copyFolderName, { recursive: true }, (error) => {
+        if (error) {
+          throw new Error("FS operation failed");
+        }
+      });
+    } else {
+      throw new Error("FS operation failed");
+    }
+  });
 };
 
 await copy();
