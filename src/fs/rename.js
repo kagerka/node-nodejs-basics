@@ -7,6 +7,8 @@ const rename = async () => {
   fileRename(fileName, newFileName, (error) => {
     if (error) {
       throw new Error("FS operation failed");
+    } else {
+      console.log("File was renamed successfully!");
     }
   });
 };

@@ -9,6 +9,8 @@ const copy = async () => {
       cp(folderName, copyFolderName, { recursive: true }, (error) => {
         if (error) {
           throw new Error("FS operation failed");
+        } else {
+          console.log("File was copied successfully!");
         }
       });
     } else {
