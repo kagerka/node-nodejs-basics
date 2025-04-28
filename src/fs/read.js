@@ -1,7 +1,7 @@
-import { readFile } from "fs";
-import pathName from "path";
+import { readFile } from "node:fs";
+import path from "node:path";
 
-const fileName = pathName.join(import.meta.dirname, "files", "fileToRead.txt");
+const fileName = path.join(import.meta.dirname, "files", "fileToRead.txt");
 
 const read = async () => {
   readFile(fileName, "utf8", (error, data) => {

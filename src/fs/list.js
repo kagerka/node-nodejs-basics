@@ -1,7 +1,7 @@
-import { readdir } from "fs";
-import pathName from "path";
+import { readdir } from "node:fs";
+import path from "node:path";
 
-const folderName = pathName.join(import.meta.dirname, "files");
+const folderName = path.join(import.meta.dirname, "files");
 
 const list = async () => {
   readdir(folderName, (error, data) => {

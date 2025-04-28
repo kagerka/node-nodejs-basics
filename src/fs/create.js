@@ -1,7 +1,7 @@
-import { stat, writeFile } from "fs";
-import pathName from "path";
+import { stat, writeFile } from "node:fs";
+import path from "node:path";
 
-const pathToFile = pathName.join(import.meta.dirname, "files", "fresh.txt");
+const pathToFile = path.join(import.meta.dirname, "files", "fresh.txt");
 const fileContent = "I am fresh and young";
 
 const create = async () => {

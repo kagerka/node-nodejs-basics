@@ -1,8 +1,8 @@
-import { access, cp } from "fs";
-import pathName from "path";
+import { access, cp } from "node:fs";
+import path from "node:path";
 
-const folderName = pathName.join(import.meta.dirname, "files");
-const copyFolderName = pathName.join(import.meta.dirname, "files_copy");
+const folderName = path.join(import.meta.dirname, "files");
+const copyFolderName = path.join(import.meta.dirname, "files_copy");
 
 const copy = async () => {
   access(copyFolderName, (notExist) => {

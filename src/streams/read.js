@@ -1,5 +1,5 @@
 import { createReadStream } from "node:fs";
-import path from "path";
+import path from "node:path";
 
 const fileName = path.join(import.meta.dirname, "files", "fileToRead.txt");
 

@@ -1,7 +1,7 @@
-import { rm } from "fs";
-import pathName from "path";
+import { rm } from "node:fs";
+import path from "node:path";
 
-const fileName = pathName.join(import.meta.dirname, "files", "fileToRemove.txt");
+const fileName = path.join(import.meta.dirname, "files", "fileToRemove.txt");
 
 const remove = async () => {
   rm(fileName, (error) => {

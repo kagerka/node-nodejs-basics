@@ -1,8 +1,8 @@
-import { rename as fileRename } from "fs";
-import pathName from "path";
+import { rename as fileRename } from "node:fs";
+import path from "node:path";
 
-const fileName = pathName.join(import.meta.dirname, "files", "wrongFilename.txt");
-const newFileName = pathName.join(import.meta.dirname, "files", "properFilename.md");
+const fileName = path.join(import.meta.dirname, "files", "wrongFilename.txt");
+const newFileName = path.join(import.meta.dirname, "files", "properFilename.md");
 
 const rename = async () => {
   fileRename(fileName, newFileName, (error) => {
